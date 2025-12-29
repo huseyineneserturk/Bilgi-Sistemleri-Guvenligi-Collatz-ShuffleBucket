@@ -42,18 +42,18 @@ Program sizden bir **seed** (tohum sayısı) isteyecektir. Herhangi bir tam say�
 ## 📊 Örnek Çıktı - (Taslak Anahtar Değeri Sonucu)
 
 ```
---- COLLATZ & S-BOX TABANLI ŞİFRELEME ---
+--- S-BOX DUYARLI & DENGELİ BİT ÜRETECİ ---
 Başlangıç Tohumu (Seed) giriniz: 1923
 
-Hedef: %50-%50 Dağılımlı 32 bitlik güvenli dizi üretiliyor...
+Hedef: 32 bit (%50 - %50 dağılım)...
 
 ==================================================
 SONUÇ: ŞİFRELİ BİT DİZİSİ
 ==================================================
 
->> ÇIKTI (String): 11000101000101100101100011100111
+>> ÇIKTI (String): 11000100110001010111001001101101
 
->> ÇIKTI (Liste) : [1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1]
+>> ÇIKTI (Liste) : [1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1]
 
 --------------------------------------------------
 DURUM   : ✅ BAŞARILI (0:16, 1:16)
