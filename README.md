@@ -1,6 +1,6 @@
 # Collatz Cipher Generator 🎲
 
-Bu proje, ünlü matematiksel problem **Collatz Sanısı (3n+1)** ve kriptografik **S-Box** yapısını kullanarak güvenli ve dengeli (balanced) rastgele sayı dizileri üretir.
+Bu proje, ünlü matematiksel problem **Collatz Sanısı (3n+1)** ve kriptografik **S-Box** yapısını kullanarak güvenli ve dengeli rastgele sayı dizileri üretir.
 
 ## 🚀 Özellikler
 
@@ -18,4 +18,4 @@ Bilgisayarınızda Python yüklü olması yeterlidir.
 3.  Aşağıdaki komutu yazın:
 
 ```bash
-python collatz_cipher.py
+python shufflebucket.py
