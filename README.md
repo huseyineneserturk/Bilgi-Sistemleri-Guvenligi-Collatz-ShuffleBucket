@@ -60,6 +60,15 @@ DURUM   : ✅ BAŞARILI (0:16, 1:16)
 ==================================================
 ```
 
+## 🏆 Challenge (Meydan Okuma)
+
+Kodun içinde gördüğünüz S-Box (`[12, 5, 6...]`) sadece örnektir. 
+Aşağıdaki şifreli metni, **farklı ve gizli bir S-Box** kullanarak ürettim.
+
+**Hedef:** Algoritmanın mantığını kullanarak, aşağıdaki çıktıyı üreten `Seed` değerini veya `S-Box` dizilimini bulmaya çalışın.
+
+**Şifreli Metin:** `11010010111...` (Buraya kendi gizli çıktını yapıştır)
+
 ## 🧪 Kullanım Alanları
 
 - Kriptografik araştırmalar
