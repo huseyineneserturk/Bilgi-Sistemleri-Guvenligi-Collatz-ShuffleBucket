@@ -39,7 +39,7 @@ python shufflebucket.py
 
 Program sizden bir **seed** (tohum sayısı) isteyecektir. Herhangi bir tam sayı girebilirsiniz.
 
-## 📊 Örnek Çıktı
+## 📊 Örnek Çıktı - (Taslak Anahtar Değeri Sonucu)
 
 ```
 --- COLLATZ & S-BOX TABANLI ŞİFRELEME ---
@@ -54,6 +54,26 @@ SONUÇ: ŞİFRELİ BİT DİZİSİ
 >> ÇIKTI (String): 11000101000101100101100011100111
 
 >> ÇIKTI (Liste) : [1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1]
+
+--------------------------------------------------
+DURUM   : ✅ BAŞARILI (0:16, 1:16)
+==================================================
+```
+
+## 📊 Örnek Çıktı - (Orijinal Anahtar Değeri Sonucu)
+```
+--- S-BOX DUYARLI & DENGELİ BİT ÜRETECİ ---
+Başlangıç Tohumu (Seed) giriniz: 1923
+
+Hedef: 32 bit (%50 - %50 dağılım)...
+
+==================================================
+SONUÇ: ŞİFRELİ BİT DİZİSİ
+==================================================
+
+>> ÇIKTI (String): 01111100000111010110000011100110
+
+>> ÇIKTI (Liste) : [0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0]
 
 --------------------------------------------------
 DURUM   : ✅ BAŞARILI (0:16, 1:16)
