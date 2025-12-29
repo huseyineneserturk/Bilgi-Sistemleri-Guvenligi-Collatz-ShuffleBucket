@@ -1,21 +1,69 @@
 # Collatz Cipher Generator 🎲
 
-Bu proje, ünlü matematiksel problem **Collatz Sanısı (3n+1)** ve kriptografik **S-Box** yapısını kullanarak güvenli ve dengeli rastgele sayı dizileri üretir.
+**Collatz Sanısı (3n+1)** ve kriptografik **S-Box** kullanarak dengeli rastgele bit dizileri üreten Python projesi.
+
+## 📐 Algoritma Akış Diyagramı
+
+![Collatz Cipher Flow](diagram.png)
+
+## 🔧 Çalışma Mantığı
+
+### 1. **Başlangıç**
+Kullanıcıdan bir `seed` (tohum) değeri alınır. Bu değer, tüm işlemlerin deterministik olmasını sağlar (aynı seed → aynı çıktı).
+
+### 2. **Çekirdek Algoritma (Core Loop)**
+- **Collatz Kuralı**: Sayı çift ise 2'ye böl (bit: 0), tek ise 3n+1 yap (bit: 1)
+- **S-Box Karıştırma**: Ham bit, S-Box tablosu ile harmanlanarak doğrusallık bozulur
+- **Kova Sistemi**: 0 ve 1'ler ayrı listelerde toplanır, her birinden tam 16 adet elde edilene kadar döngü devam eder
+
+### 3. **Final Karıştırma**
+Toplanan 16 adet 0 ve 16 adet 1, seed'e bağlı deterministik shuffle ile karıştırılır. Böylece sıralı görünüm ortadan kalkar ve homojen dağılım sağlanır.
+
+### 4. **Çıktı**
+32 bitlik dengeli (%50-0, %50-1) şifreli dizi hem string hem liste formatında gösterilir.
 
 ## 🚀 Özellikler
 
-* **Matematiksel Kaos:** Collatz algoritması ile tahmin edilemez sayı üretimi.
-* **S-Box Karıştırma:** Çıktıların lineerliğini bozan kriptografik katman.
-* **Mükemmel Denge:** Çıktıda her zaman **eşit sayıda 0 ve 1** bulunur (%50 - %50).
-* **Deterministik Yapı:** Aynı `seed` girildiğinde her zaman aynı şifreyi üretir (Analiz için uygundur).
+- ✅ **Mükemmel Denge**: Her zaman eşit sayıda 0 ve 1
+- 🔐 **Kriptografik Katman**: S-Box ile lineerlik kırılması
+- 🎯 **Deterministik**: Aynı seed, aynı sonuç (test edilebilir)
+- ⚡ **Collatz Kaosu**: Tahmin edilemez sayı üretimi
 
-## 🛠️ Kurulum ve Çalıştırma
+## 📦 Kurulum ve Çalıştırma
 
-Bilgisayarınızda Python yüklü olması yeterlidir.
-
-1.  Repoyu klonlayın veya zip olarak indirin.
-2.  Terminali açın ve dosyanın olduğu dizine gidin.
-3.  Aşağıdaki komutu yazın:
+Python yüklü olması yeterlidir. Terminal'de:
 
 ```bash
 python shufflebucket.py
+```
+
+Program sizden bir **seed** (tohum sayısı) isteyecektir. Herhangi bir tam sayı girebilirsiniz.
+
+## 📊 Örnek Çıktı
+
+```
+Başlangıç Tohumu (Seed) giriniz: 1923
+
+==================================================
+SONUÇ: ŞİFRELİ BİT DİZİSİ
+==================================================
+
+>> ÇIKTI (String): 01101001011010010110100101101001
+
+>> ÇIKTI (Liste) : [0,1,1,0,1,0,0,1,0,1,1,0,1,0,0,1,...]
+
+--------------------------------------------------
+DURUM   : ✅ BAŞARILI (0:16, 1:16)
+==================================================
+```
+
+## 🧪 Kullanım Alanları
+
+- Kriptografik araştırmalar
+- Rastgele sayı üreteci (PRNG/CSPRNG) analizi
+- Matematiksel kaos teorisi deneyleri
+- Eğitim ve öğretim amaçlı şifreleme örnekleri
+
+---
+
+**Not**: Bu proje eğitim amaçlıdır. Gerçek ürün ortamlarında endüstri standardı kriptografik kütüphaneler kullanılmalıdır.
