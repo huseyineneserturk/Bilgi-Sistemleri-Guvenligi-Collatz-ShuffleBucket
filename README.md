@@ -63,7 +63,7 @@ DURUM   : ✅ BAŞARILI (0:16, 1:16)
 
 ## 🏆 Challenge (Meydan Okuma)
 
-Kodun içinde gördüğünüz S-Box (`[12, 5, 6...]`) sadece örnektir. 
+Kodun içinde gördüğünüz S-Box (`12, 5, 6, 11, 9, 0, 10, 13, 3, 14, 15, 8, 4, 7, 1, 2`) sadece örnektir. 
 Aşağıdaki şifreli metni, **farklı ve gizli bir S-Box** kullanarak ürettim.
 
 **Hedef:** Algoritmanın mantığını kullanarak, aşağıdaki çıktıyı üreten `S-Box` dizilimini bulmaya çalışın.
