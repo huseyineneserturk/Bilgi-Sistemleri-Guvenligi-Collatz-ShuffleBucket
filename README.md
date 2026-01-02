@@ -201,6 +201,102 @@ DURUM   : ✅ BAŞARILI (0:16, 1:16)
 
 ---
 
+## 🔬 Diehard Test Suite
+
+Bu proje, rastgele sayı üretecinin kalitesini değerlendirmek için **Diehard Test Suite** içerir!
+
+### 📊 Testler
+
+Implementasyon edilen testler:
+
+| Test | Açıklama | Amaç |
+|------|----------|------|
+| **Frequency Test** | 0/1 dengesi | Monobit dağılımı |
+| **Runs Test** | Ardışık bit grupları | Run dağılımı |
+| **Longest Run** | En uzun 1 dizisi | Blok içi maksimum |
+| **Poker Test** | m-bit paternleri | Segment dağılımı |
+| **Autocorrelation** | Kendisiyle korelasyon | Bağımsızlık |
+| **Matrix Rank** | Matris rankları | Lineer bağımsızlık |
+
+### 🚀 Nasıl Çalıştırılır?
+
+```bash
+# Diehard testlerini çalıştır
+python diehard_tests.py
+
+# Veya direkt seed ile
+python diehard_tests.py 1923
+```
+
+### 📈 Örnek Test Çıktısı
+
+```
+🎲 Collatz Cipher - Diehard Test Suite
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+======================================================================
+  COLLATZ CIPHER - DIEHARD TEST SÜİTİ
+======================================================================
+Seed: 1923
+Bit sayısı: 100,000
+======================================================================
+
+📊 Veri üretiliyor...
+✅ 100,000 bit üretildi
+
+🔍 Çalıştırılıyor: Frequency...
+   ✅ BAŞARILI
+
+🔍 Çalıştırılıyor: Runs...
+   ✅ BAŞARILI
+
+🔍 Çalıştırılıyor: Longest Run...
+   ✅ BAŞARILI
+
+🔍 Çalıştırılıyor: Poker (m=4)...
+   ✅ BAŞARILI
+
+🔍 Çalıştırılıyor: Autocorrelation (d=1)...
+   ✅ BAŞARILI
+
+🔍 Çalıştırılıyor: Autocorrelation (d=2)...
+   ✅ BAŞARILI
+
+🔍 Çalıştırılıyor: Binary Matrix Rank...
+   ✅ BAŞARILI
+
+======================================================================
+  ÖZET: 7/7 test başarılı (100.0%)
+======================================================================
+```
+
+### 🎯 Test Parametreleri
+
+| Parametre | Değer | Açıklama |
+|-----------|-------|----------|
+| **Hızlı Test** | 10,000 bit | Temel kontrol |
+| **Orta Test** | 100,000 bit | Önerilen |
+| **Kapsamlı Test** | 1,000,000 bit | Detaylı analiz |
+
+### 📚 Test Metodolojisi
+
+Her test, belirli istatistiksel özellikleri kontrol eder:
+
+1. **Ki-Kare Testi**: Dağılım analizi (α=0.05)
+2. **Z-Skoru**: Normal dağılım kontrolü
+3. **Kritik Değerler**: %95 güven aralığı
+
+### ⚠️ Test Sonuçları Hakkında
+
+> **Not:** Bu testler, algoritmanın rastgelelik kalitesini **eğitim amaçlı** değerlendirir. Üretim ortamında kullanım için:
+> - NIST SP 800-22 test suite
+> - TestU01 battery
+> - Dieharder (genişletilmiş Diehard)
+> 
+> gibi endüstri standardı test araçları kullanılmalıdır.
+
+---
+
 ## 🎨 Teknik Detaylar
 
 ### S-Box Yapısı
